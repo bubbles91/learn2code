@@ -6,13 +6,19 @@
    Tutorial Case
 
    Columns Style Sheet
-   Author: 
-   Date:   
+   Author: John Lovelace
+   Date: 10/14/2019  
 
    Filename:         dlr_columns.css
 
 */
-
+@media only screen and (min-width: 641px){
+	article{
+		-moz-column-count: 2;
+		-webkit-column-count: 2;
+		column-count: 2;
+	}
+}
 
 
 /* Column Styles */
