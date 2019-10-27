@@ -7,8 +7,8 @@
       Tutorial Case
 
       Red Ball Pizza Survey Form
-      Author: 
-      Date:   
+      Author: John Lovelace
+      Date: 10/27/2018  
 
       Filename:   rb_survey.html
 
@@ -19,6 +19,8 @@
    <title>Red Ball Survey</title>
    <link href="rb_reset.css" rel="stylesheet" />
    <link href="rb_styles.css" rel="stylesheet" />
+   <link rel="stylesheet" type="text/css" href="rb_forms.css" />
+   <script type="text/javascript" src="rb_formsubmit.js"></script>
 
 </head>
 
@@ -51,6 +53,51 @@
          Pizza will not share your contact information with third 
          parties, <em>ever</em>. </p>
       <p>Required values are marked by an asterisk (*)</p>
+      <form id="survey" action="http://www.example.com/redball/survey" method="post">
+         <fieldset id="custInfo">
+            <legend>Customer Information</legend>
+            
+            <div class="formRow">
+            <label for="name">Name*</label>
+            <input type="text" name="custName" id="name">
+            </div>
+
+            <div class="formRow">
+            <label for="street">Street address</label>
+            <input type="text" name="custStreet" id="street">
+            </div>
+
+            <div class="formRow">
+            <label for="city">City</label>
+            <input type="text" name="custCity" id="city">
+            </div>
+
+            <div class="formRow">
+            <label for="state">State</label>
+            <input type="text" name="custState" id="state">
+            </div>
+
+            <div class="formRow">
+            <label for="zip">Postal Code</label>
+            <input type="text" name="custZip" id="zip">
+            </div>
+
+            <div class="formRow">
+            <label for="phone">Phone number</label>
+            <input type="tel" name="custPhone" id="phone">
+            </div>
+
+            <div class="formRow">
+            <label for="mail">E-mail*</label>
+            <input type="email" name="custEmail" id="mail">
+            </div>
+
+         </fieldset>
+
+         <fieldset id="expInfo">
+            <legend>Share Your Experience at Red Ball Pizza</legend>
+         </fieldset>
+      </form>
 
      
    </section>
