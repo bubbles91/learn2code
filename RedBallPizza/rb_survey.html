@@ -59,7 +59,7 @@
             
             <div class="formRow">
             <label for="name">Name*</label>
-            <input type="text" name="custName" id="name">
+            <input type="text" name="custName" id="name" placeholder="first and last name">
             </div>
 
             <div class="formRow">
@@ -69,22 +69,22 @@
 
             <div class="formRow">
             <label for="city">City</label>
-            <input type="text" name="custCity" id="city">
+            <input type="text" name="custCity" id="city" value="Ormond Beach">
             </div>
 
             <div class="formRow">
             <label for="state">State</label>
-            <input type="text" name="custState" id="state">
+            <input type="text" name="custState" id="state" value="FL">
             </div>
 
             <div class="formRow">
             <label for="zip">Postal Code</label>
-            <input type="text" name="custZip" id="zip">
+            <input type="text" name="custZip" id="zip" placeholder="nnnnn (-nnnn)">
             </div>
 
             <div class="formRow">
             <label for="phone">Phone number</label>
-            <input type="tel" name="custPhone" id="phone">
+            <input type="tel" name="custPhone" id="phone" placeholder="(nnn) nnn-nnnn">
             </div>
 
             <div class="formRow">
@@ -96,6 +96,84 @@
 
          <fieldset id="expInfo">
             <legend>Share Your Experience at Red Ball Pizza</legend>
+
+            <div class="formRow">
+               <label for="visit">Date of visit</label>
+               <input type="date" name="visitDate" name="visit">
+            </div>
+
+            <div class="formRow">
+               <label for="order">Order type</label>
+               <select name="orderType" id="order">
+                  <option value="order1">Carry Out</option>
+                  <option value="order2">Delivery</option>
+                  <option value="order3" selected>Dine in</option>
+                  <option value="order4">Take 'n bake</option>
+               </select>
+            </div>
+
+            <div class="formRow">
+               <label for="info">Where did you hear about us?
+                  <br>(Select all that apply)
+               </label>
+               <select name="infoSrc" id="info" size="5" multiple="">
+                  <option value="internet">Internet</option>
+                  <option value="mag">Magazine</option>
+                  <option value="news">Newspaper</option>
+                  <option value="word">Word of mounth</option>
+                  <option value="other">Other</option>
+               </select>
+            </div>
+
+            <div class="formRow">
+               <label>Was your service friendly?</label>
+               <fieldset class="optGroup">
+                  <label for="fyes">Yes</label>
+                  <input type="radio" name="sFriend" id="fYes" value="yes">
+                  <label for="fNo">No</label>
+                  <input type="radio" name="sFriend" id="no" value="no">
+               </fieldset>
+            </div>
+
+            <div class="formRow">
+               <label>Was your order correct?</label>
+               <fieldset class="optGroup">
+                  <label for="cYes">Yes</label>
+                  <input type="radio" name="oCorrect" id="cYes" value="yes">
+                  <label for="cNo">No</label>
+                  <input type="radio" name="oCorrect" id="cNo" value="no">
+               </fieldset>
+            </div>
+
+            <div class="formRow">
+               <label>Was your food hot?</label>
+               <fieldset class="optGroup">
+                  <label for="hYes">Yes</label>
+                  <input type="radio" name="foodhot" id="hYes" value="yes">
+                  <label for="hNo">No</label>
+                  <input type="radio" name="foodhot" id="hNo" value="no">
+               </fieldset>
+            </div>
+
+            <div class="formRow">
+               <label for="dineSpin">How many times do you dine out per month?</label>
+               <input type="number" name="dineOut" id="dineSpin" value="1" step="1" min="0" max="20">
+            </div>
+
+            <input type="checkbox" name="mailMe" id="mailCB" value="yes">
+            <label for="mailCB">Add me to your mailing list for great coupons and specials!</label>
+
+            <div class="formRow">
+               <label for="rangeBox">Rate the overall service<br>
+               (0=poor; 10=great)</label>
+               0
+               <input type="range" name="serviceRate" id="rangeBox" value="5" step="1" min="0" max="10">
+               10
+            </div>
+
+            <label for="commBox">Tell us more about your experience!</label>
+            <textarea name="custExp" id="commbox"></textarea>
+
          </fieldset>
       </form>
 
