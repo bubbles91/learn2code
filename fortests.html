@@ -1,295 +1,212 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="keywords" content="math, Euler, pi, geometry" />
-	<title>Leonhard Euler (1707-1783)</title>
-	<link rel="stylesheet" type="text/css" href="sd_base.css" />
-  <link rel="stylesheet" type="text/css" href="sd_layout.css" />
-  <link rel="stylesheet" type="text/css" href="sd_effects.css" />
+   <!--
+      New Perspectives on HTML5 and CSS3, 7th Edition
+      Tutorial 7
+      Case Problem 2
+
+      Spice Bowl Payment Form
+      Author: John Lovelace
+      Date: 10/28/2019
+
+      Filename:   sb_payment.html
+
+   -->
+
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <title>Spice Bowl Payment Form</title>
+   <link href="sb_reset.css" rel="stylesheet" />
+   <link href="sb_styles.css" rel="stylesheet" />
+   <link rel="stylesheet" href="sb_forms.css" />
+   <link rel="stylesheet" href="sb_validate.css" />
+   <script type="text/javascript" src="sb_script.js" />
+
+   </script>
 </head>
+
 <body>
-<header><img src="ms_logo.png" alt="Math Strings"></header>
-<article>
-	<h1>Leonhard Euler (1707-1783)</h1>
+   <header>
+      <img src="sb_logo.png" alt="The Spice Bowl" />
 
-<p>The greatest mathematician of the eighteenth century, 
-  <strong>Leonhard Euler</strong> was born in Basel, Switzerland. There, 
-he studied under another giant of mathematics, <strong>Jean 
-  Bernoulli</strong>. In 1731 Euler became a professor of physics 
-and mathematics at St. Petersburg Academy of Sciences. 
-Euler was the most prolific mathematician of all time, 
-  publishing over <em>800 different books and papers</em>. His 
-  influence was felt in physics and astronomy as well.</p>
+      <form id="login" action="http://www.example.com/sb/login" method="post">
 
-<p>He is perhaps best known for his research into 
-mathematical analysis. Euler's work, 
-  <cite>Introductio in analysin infinitorum (1748)</cite>, 
-remained a standard textbook in the field for 
-well over a century. For the princess of Anhalt-Dessau, 
-he wrote 
-  <cite>Lettres &agrave; une princesse d'Allemagne (1768-1772)</cite>, 
-giving a clear non-technical outline of the main 
-  physical theories of the time.</p>
+        <input type="text" name="userBox" id="userBox" placeholder="username">
 
-<p>One can hardly write a mathematical equation without 
-copying Euler. Notations still in use today, such 
-  as <var>e</var> and <var>&pi;</var>, were introduced 
-in Euler's writings. Leonhard Euler died in 1783, 
-leaving behind a legacy perhaps unmatched, and 
-  certainly unsurpassed, in the annals of mathematics.</p>
-</article>
-<aside>
-  <h1>The Most Beautiful Equation in Math?</h1>
+        <input type="text" name="pwdBox" id="pwdBox" placeholder="password">
 
-<p>Perhaps the most elegant equation in the history of math is:</p>
+      </form>
 
-<code>cos(<var>x</var>)+isin(<var>x</var>)=<var>e</var>^<var><sup>xi</sup></var></code>
+      <nav> <a id="navicon" href="#"><img src="sb_navicon.png" alt="" /></a>
+         <ul>
+            <li><a href="#">Spices</a></li>
+            <li><a href="#">Recipes</a></li>
+            <li><a href="#">My Cart</a></li>
+            <li><a href="#">My Account</a></li>
+            <li><a href="#">Contact Us</a></li>
+         </ul>
+      </nav>
+   </header>
 
-<p>which demonstrates the relationship between algebra, 
-complex analysis, and trigonometry. From this 
-equation, it's easy to derive the identity:</p>
+   <section>
+      <h1>Payment Form</h1>
+      <form id="payment" action="http://www.example.com/sb/payment" method="post">
 
-<code>e^<sup>&pi;i</sup>+1=0</code>
+        <fieldset id="billing">
+        <legend>Billing Information (required)</legend>
 
-<p>which relates the fundamental constants: 
-<var>0</var>, <var>1</var>, <var>&pi;</var>, <var>e</var>, and <var>i</var> in a single beautiful and 
-elegant statement. A poll of readers 
-conducted by <cite>The Mathematical Intelligencer</cite>
-magazine named Euler's Identity as the 
-most beautiful theorem in the history of 
-mathematics.</p>
-</aside>
-<nav>
-  <h1>Learn more about Euler</h1>
-<ul>
- <li><a href="http://en.wikipedia.org/wiki/Leonhard_Euler">Euler at Wikipedia</a></li>
- <li><a href="http://eulerarchive.maa.org/">The Euler Archive</a></li>
- <li><a href="https://biography.com/people/leonhard-euler-21342391">Euler at Biography.com</a></li>
- <li><a href="http://famousscientist.org/leonhard-euler">Euler at Famous Scientists</a></li>
-<ul>
-</nav>
-<footer></footer>
+        <label for="firstBox">First Name</label>
+        <input type="text" name="fName" id="firstBox" required />
+
+        <label for="lastBox">Last Name</label>
+        <input type="text" name="lName" id="lastBox" required />
+
+        <label for="streetBox">Street Address</label>
+        <input type="text" name="street" id="streetBox" required />
+
+        <label for="streetBox2">Street Address (2)</label>
+        <input type="text" name="street2" id="streetBox2" />
+
+        <label for="cityBox">City</label>
+        <input type="text" name="city" id="cityBox" required />
+
+        <label for="stateBox">State</label>
+        <input type="text" name="state" id="stateBox" list="stateList" required />
+        <datalist id="stateList">
+          <option value="AL" />
+          <option value="AK" />
+          <option value="AZ" />
+          <option value="AR" />
+          <option value="CA" />
+          <option value="CA" />
+          <option value="CO" />
+          <option value="CT" />
+          <option value="DE" />
+          <option value="FL" />
+          <option value="GA" />
+          <option value="HI" />
+          <option value="ID" />
+          <option value="IL" />
+          <option value="IN" />
+          <option value="IA" />
+          <option value="KS" />
+          <option value="KY" />
+          <option value="LA" />
+          <option value="ME" />
+          <option value="MD" />
+          <option value="MA" />
+          <option value="MI" />
+          <option value="MN" />
+          <option value="MS" />
+          <option value="MO" />
+          <option value="MT" />
+          <option value="NE" />
+          <option value="NV" />
+          <option value="NH" />
+          <option value="NJ" />
+          <option value="NM" />
+          <option value="NY" />
+          <option value="NC" />
+          <option value="ND" />
+          <option value="OH" />
+          <option value="OK" />
+          <option value="OR" />
+          <option value="PA" />
+          <option value="RI" />
+          <option value="SC" />
+          <option value="SD" />
+          <option value="TN" />
+          <option value="TX" />
+          <option value="UT" />
+          <option value="VT" />
+          <option value="VA" />
+          <option value="WA" />
+          <option value="WV" />
+          <option value="WI" />
+          <option value="WY" />
+        </datalist>
+
+        <label for="zipBox">ZIP/Postal Code</label>
+        <input type="text" name="zip" id="zipBox" pattern="^\d{5}(-\d{4})?$" />
+
+        <label for="countryBox">Country</label>
+        <input type="text" name="country" id="countryBox" value="United States" required />
+
+        <label for="phoneBox">Phone</label>
+        <input type="tel" name="phone" id="phoneBox" required pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$" />
+
+        </fieldset>
+
+      </form>
+
+      <aside>
+         <h1>Menu Ideas</h1>
+         <h2>Salt-Roasted Pecans</h2>
+         <ul>
+            <li>2 cups pecans</li>
+            <li>3 Tbs. butter, melted</li>
+            <li>1 1/4 tsp. fine sea salt</li>
+         </ul>
+         <p>Preheat oven to 325&deg;. Toss pecans and butter together;
+            add salt and toss again.  Spread in a single layer on a baking
+            sheet.  Bake about 15 minutes.  Cook on baking sheet.
+         </p>
+
+         <h2>Dried Beef Sticks</h2>
+         <ul>
+            <li>5 lbs. ground chuck</li>
+            <li>5 Tbs. quick salt</li>
+            <li>3 tsp. mustard seed</li>
+            <li>2 tsp. granulated garlic</li>
+            <li>2 tsp. cracked pepper</li>
+            <li>1 Tbs. hickory smoked salt</li>
+            <li>1 Tbs. liquid smoke</li>
+         </ul>
+         <p>Mix beef and season.  Place in a large covered container
+            for three days.
+            On third day, shape beef into sticks, and bake at 150&deg; for
+            8 hours (turn half-way through).
+         </p>
+      </aside>
+
+   </section>
+
+   <footer>
+      <nav>
+         <ul>
+            <li class="newgroup"><a href="#">Home</a></li>
+            <li><a href="#">Keyword Search</a></li>
+
+            <li class="newgroup"><a href="#">Spices</a></li>
+            <li><a href="#">Seasonings</a></li>
+            <li><a href="#">Blends</a></li>
+            <li><a href="#">Salts &amp; Peppers</a></li>
+            <li><a href="#">Popcorn Seasonings</a></li>
+            <li><a href="#">Dip Mixes</a></li>
+            <li><a href="#">Bulk Spices</a></li>
+            <li><a href="#">Extracts</a></li>
+            <li><a href="#">Flavorings</a></li>
+
+            <li class="newgroup"><a href="#">Spice Jars</a></li>
+            <li><a href="#">Spice Jar Labels</a></li>
+            <li><a href="#">Spice Sets</a></li>
+            <li><a href="#">Mortar &amp; Pestles</a></li>
+
+            <li class="newgroup"><a href="#">Cookbooks</a></li>
+            <li><a href="#">Online Recipes</a></li>
+            <li><a href="#">Forums</a></li>
+
+            <li class="newgroup"><a href="#">My Account</a></li>
+            <li><a href="#">Checkout</a></li>
+            <li><a href="#">Order History</a></li>
+            <li><a href="#">Shipping Info</a></li>
+
+            <li class="newgroup"><a href="#">Tech Support</a></li>
+            <li><a href="#">Hours</a></li>
+            <li><a href="#">Contact Us</a></li>
+         </ul>
+      </nav>
+   </footer>
 </body>
-
-<table class="spuzzle"><caption>Sudoku</caption>
-  <thead>
-    <tr>
-      <th></th>
-      <th>1</th>
-      <th>2</th>
-      <th>3</th>
-      <th>4</th>
-      <th>5</th>
-      <th>6</th>
-      <th>7</th>
-      <th>8</th>
-      <th>9</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>A</th>
-      <td class="greenBox" rowspan="3" colspan="3">
-        <table class="subTable">
-          <tr>
-            <td></td>
-            <td></td>
-            <td>4</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>5</td>
-            <td></td>
-          </tr>
-        </table>
-      </td>
-      <td class="goldBox" rowspan="3" colspan="3">
-        <table class="subTable">
-          <tr>
-            <td>5</td>
-            <td></td>
-            <td>3</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-        </table>
-      </td>
-      <td class="greenBox" rowspan="3" colspan="3">
-        <table class="subTable">
-          <tr>
-            <td></td>
-            <td>7</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>1</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td></td>
-            <td></td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-    <tr>
-      <th>B</th>
-    </tr>
-    <tr>
-      <th>C</th>
-    </tr>
-    <tr>
-      <th>D</th>
-      <td class="goldBox" rowspan="3" colspan="3">
-        <table class="subTable">
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>6</td>
-            <td></td>
-            <td>9</td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>7</td>
-            <td>2</td>
-          </tr></table>
-      </td>
-      <td class="greenBox" rowspan="3" colspan="3">
-        <table class="subTable">
-          <tr>
-            <td></td>
-            <td>2</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>9</td>
-            <td></td>
-          </tr>
-        </table>
-      </td>
-      <td class="goldBox" rowspan="3" colspan="3">
-        <table class="subTable">
-          <tr>
-            <td>9</td>
-            <td>3</td>
-            <td>7</td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td></td>
-            <td>8</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-    <tr>
-      <th>E</th>
-    </tr>
-    <tr>
-      <th>F</th>
-    </tr>
-    <tr>
-      <th>G</th>
-      <td class="greenBox" rowspan="3" colspan="3">
-        <table class="subTable">
-          <tr>
-            <td></td>
-            <td></td>
-            <td>1</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>4</td>
-            <td>5</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>6</td>
-            <td></td>
-          </tr>
-        </table>
-      </td>
-      <td class="goldBox" rowspan="3" colspan="3">
-        <table class="subTable">
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>8</td>
-            <td></td>
-            <td>1</td>
-          </tr>
-        </table>
-      </td>
-      <td class="greenBox" rowspan="3" colspan="3">
-        <table class="subTable">
-          <tr>
-            <td></td>
-            <td>5</td>
-            <td>2</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>7</td>
-            <td></td>
-            <td></td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-    <tr>
-      <th>H</th>
-    </tr>
-    <tr>
-      <th>I</th>
-    </tr>
-  </tbody>
-</table>
-
-
-
-
-
 </html>
